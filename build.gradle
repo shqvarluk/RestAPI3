@@ -1,3 +1,5 @@
+import java.lang.reflect.Type
+
 plugins {
     id 'java-library'
     id "io.qameta.allure" version "2.11.2"
@@ -35,4 +37,8 @@ tasks.withType(Test) {
             exceptionFormat "short"
         }
     }
+}
+
+test {
+    useJUnitPlatform()
 }
